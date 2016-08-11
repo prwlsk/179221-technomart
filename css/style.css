@@ -1,13 +1,23 @@
 body {
-	font-family: "CuprumRegular", sans-serif;
-	font-size: 16px;
-	line-height: 18px;
+  font-family: "Cuprum";
+  font-size: 17px;
+  line-height: 1;
 }
 h2 {
-    font-size: 30px;
-    line-height: 30px;
-    text-transform: uppercase;
-    color: #32425c;
-
-
+  font-size: 30px;
+  color: rgb(50, 66, 92);
+  text-transform: uppercase;
+  line-height: 1;
+}
+h3 {
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  line-height: 0.8;
+}
+.left-menu h3 {
+	font-family: "PT Sans";
+	font-weight: bold;
+	font-size: 17px;
+	line-height: 30px;
 }
