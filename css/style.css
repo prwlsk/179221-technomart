@@ -1,23 +1,660 @@
+/*ОБЩИЕ СТИЛИ*/
+
 body {
   font-family: "Cuprum";
   font-size: 17px;
   line-height: 1;
 }
+
+.container {
+  width: 940px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 h2 {
   font-size: 30px;
   color: rgb(50, 66, 92);
   text-transform: uppercase;
   line-height: 1;
 }
+
 h3 {
   font-size: 30px;
   color: rgb(0, 0, 0);
   text-transform: uppercase;
   line-height: 0.8;
 }
+
+li {
+  list-style: none;
+}
+
 .left-menu h3 {
 	font-family: "PT Sans";
 	font-weight: bold;
 	font-size: 17px;
 	line-height: 30px;
 }
+
+                                                          /*ГЛАВНАЯ*/
+/*ВЕРХНЯЯ ШАПКА*/
+.top-header {
+  background-color: #293449;
+  margin-top: 0;
+}
+.top-header a {
+  color:#ffffff;
+}
+.header-logo {
+  float: left;
+  display: inline-block;
+  background-color: #ee3643;
+  padding: 10px 55px;
+  box-shadow: 0px 5px 0px 0px #b52933;
+}
+
+.header-logo a {
+    color:#ffffff;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 24px;
+    text-decoration: none;
+    
+}
+.search {
+  float: left;
+  margin-left: 10px;
+  width: 90px;
+}
+ 
+.top-header-nav {
+  float: right;
+  width: 460px;
+}
+
+.bookmarks {
+  float: left;
+}
+
+.shopping-card {
+  float: left;
+  margin-left: 70px;
+}
+
+.order {
+  float: right;
+  display: block;
+  background-color: #63a63e;
+  padding: 10px 20px;
+  margin-top: -15px;
+}
+.order a {
+  color:#ffffff;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+
+/*ГЛАВНАЯ ШАПКА*/
+.main-header {
+  padding-top: 45px;
+  background-color: #f1f5f7;
+}
+.middle-nav {
+  padding-bottom: 45px;
+  background-color:#f1f5f7;
+}
+
+.about {
+  display: inline-block;
+  float: left;
+  width: 300px;
+}
+
+.contacts {
+  float: left;
+  width: 270px;
+  margin-left: 20px;
+}
+
+.sign-in-up {
+  float: right;
+  width:300px;
+}
+
+.bottom-nav {
+  margin-bottom: 60px;
+}
+
+.bottom-header-content {
+  margin: 0;
+  padding: 0;
+  background-color: #32425c;
+}
+
+.header-nav {
+  display: inline-block;
+  padding:20px 30px 18px;
+}
+
+.header-nav a {
+  color:#ffffff;
+  text-decoration: none;
+}
+
+/*БЛОК С БАННЕРАМИ*/
+
+.banners {
+  margin-bottom: 55px;
+}
+
+.banners p,
+.banners a {
+  color:#ffffff;
+}
+.category {
+  width: 300px;
+  height: 123px;
+}
+
+.first-line {
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.materials {
+  float:left;
+  background-color: #f6b22d;
+}
+
+.tools {
+  float: left;
+  margin-left: 20px;
+  background-color:#4aafde;
+}
+
+.tech {
+  float: right;
+  background-color: #cc79d1;
+}
+
+
+.slider {
+  float: left;
+  width:620px;
+  background:white;
+  box-shadow:0 0 3px #ccc;
+}
+
+.slider-wrapper {
+  position:relative;
+}
+.slider-wrapper input[type=radio] {
+  display:none;
+}
+.box-slides img {
+  width:620px;
+  height:266px;
+  float:left;
+}
+.box-slides {
+  width:300%;
+  transition: transform .5s ease;
+}
+.box-inner {
+  overflow:hidden;
+}
+.box-toggl {
+  text-align:center;
+  position:absolute;
+  left:0;
+  bottom:35px;
+  width:100%;
+  z-index: 1;
+  
+}
+.box-toggl label{
+  display:inline-block;
+  width:5px;
+  height:5px;
+  margin:0px 3px;
+  background-color:#ffffff;
+  cursor:pointer;
+  box-shadow:0 0 2px 0 rgba(0, 0, 0, .8);
+  border-radius:50%;
+  border:2px solid white;
+  transition: background-color .2s;
+}
+
+#btn-1:checked ~ .box-toggl label[for="btn-1"],
+#btn-2:checked ~ .box-toggl label[for="btn-2"] { 
+    background-color:#ef414d;
+}
+#btn-1:checked ~ .box-inner .box-slides { 
+transform:translate(0);
+}
+#btn-2:checked ~ .box-inner .box-slides { 
+  transform:translate(-500px);
+}
+
+
+
+.sale {
+  float: right;
+  background-color: #85d179;
+}
+
+.delivery {
+  float: right;
+  margin-top: 20px;
+  background-color: #f6b22d;
+}
+
+/*ПОПУЛЯРНЫЕ ТОВАРЫ*/
+.popular-items {
+  margin-bottom: 20px;
+  background-color: #f7f3ec;
+}
+
+.popular-title {
+  float: left;
+}
+
+.popular-all {
+    float: right;
+    margin: 25px;
+}
+.popular-items-list {
+  display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin-bottom: 20px;
+}
+
+.item {
+  width: 220px;
+  height: 320px;
+  border: 1px solid #e5e5e5;
+}
+
+.red-btn {
+  display: inline-block;
+  background-color: #ee3643;
+  width:253px;
+  text-align: center;
+  color:#ffffff;
+  text-transform: uppercase;
+  font-size:14px;
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+
+
+/*ПОПУЛЯРНЫЕ ПРОИЗВОДИТЕЛИ*/
+
+.popular-producers {
+  margin-bottom: 20px;
+  background-color: #f7f3ec;
+}
+
+.brands {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 85px;
+}
+
+.brand-item {
+  width:220px;
+  height: 145px;
+  margin-bottom: 20px;
+  border: 1px solid #e7e7e7;
+  text-align: center;
+}
+
+.producers {
+  margin-bottom: 90px;
+}
+
+.brand-item:nth-last-child(-n+4) {
+  margin-bottom:0px;
+}
+
+
+/*СЕРВИСЫ*/
+
+.services {
+  background-color: #f2f6f8;
+  margin-bottom: 100px;
+}
+.services-about {
+  padding-top: 50px;
+}
+.services-about p {
+  font-family: "PT Sans";
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.services-options {
+margin-top: 75px;
+}
+.fake-form {
+  float: left;
+  width: 240px;
+  height: 185px;
+}
+.option-description {
+  width: 400px;
+  float: left;
+  margin-left: 80px;
+}
+
+
+/*О КОМПАНИИ*/
+
+.about-company {
+  margin-top: 80px;
+  margin-bottom: 85px;
+}
+.about-text {
+  width: 540px;
+  float: left;
+}
+.about-contacts {
+  width: 300px;
+  float: right;
+}
+
+
+/*ПОДВАЛ*/
+.main-footer {
+  background-color: #32425c;
+}
+.footer-logo {
+  float: left;
+  display: inline-block;
+  background-color: #ee3643;
+  padding: 10px 55px;
+  box-shadow: 0px 5px 0px 0px #b52933;
+}
+
+.footer-logo a {
+    color:#ffffff;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 24px;
+    text-decoration: none;
+    
+}
+
+.footer-top-nav {
+  float: right;
+}
+
+.footer-top-nav ul li {
+  display: inline-block;
+  padding:25px 30px;
+}
+
+.footer-adress {
+  float: left;
+}
+.footer-bottom-nav {
+  float: right;
+}
+
+.footer-bottom-nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width:540px;
+}
+
+.main-footer-first-line a,
+.main-footer-second-line span {
+  color:#ffffff;
+}
+.main-footer-second-line a {
+  color:#ffd180;
+}
+
+/*ВТОРОЙ ПОДВАЛ*/
+.bottom-footer {
+  padding-top: 55px;
+  background-color: #293449;
+}
+.copyright {
+  float: left;
+  width:240px;
+}
+.social-links {
+  float: left;
+  margin-left: 140px;
+  width: 160px;
+}
+
+.feedback-made {
+  float: right;
+  width: 310px;
+}
+.bottom-footer p,
+.bottom-footer a {
+  color: #ffffff;
+}
+
+
+
+                                      /*КАТАЛОГ*/
+/*ШАПКА*/
+
+.my-account {
+  float: right;
+}
+.card {
+  width:150px;
+}
+.user-actions li {
+  display: inline-block;
+}
+
+.breadcrumbs ul li {
+  display: inline-block;
+}
+
+.section {
+  margin-bottom: 20px;
+  background-color: #f7f3ec;
+}
+
+  /*КАТАЛОГ*/
+.filters {
+  float: left;
+  width: 220px;
+}
+.range-controls {
+   overflow:hidden;
+}
+.catalog-page {
+  width: 700px;
+  float:right;
+  margin-bottom: 60px;
+}
+
+.catalog-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+.catalog-item {
+  margin-bottom: 20px;
+}
+.section-description {
+  padding-bottom: 60px;
+}
+
+
+
+
+
+
+
+/*======================================
+ Системное оформление - не изменять
+=======================================*/
+
+/*body {
+  padding: 3px;
+}
+
+body > *,
+body > * > *,
+body > * > * > * {
+  position: relative;
+}
+
+body > *::before,
+body > * > *::before,
+body > * > * > *::before {
+  display: none;
+}
+
+body > *::before {
+  top: -3px;
+  left: -3px;
+}
+
+body > * > *::before {
+  top: -3px;
+  left: -3px;
+}
+
+body > * > * > *::before {
+  top: 0;
+  left: 0;
+}
+
+body > * {
+  background: rgba(0, 128, 0, 0.2);
+  box-shadow: 0 0 0 3px green;
+}
+
+body > *::before {
+  color: white;
+
+  background: green;
+}
+
+body > * > * {
+  background: rgba(255, 45, 82, 0.2);
+  box-shadow: 0 0 0 3px rgb(255, 45, 82);
+}
+
+body > * > *::before {
+  color: white;
+
+  background: rgb(255, 45, 82);
+}
+
+body > * > * > * {
+  background: rgba(234, 255, 45, 0.2);
+  box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
+
+}
+
+body > * > * > *::before {
+  color: black;
+
+  background: rgb(234, 255, 45);
+}
+
+.top-header::before {
+  content: ".main-header";
+}
+
+.container::before {
+  content: ".container";
+}
+
+.main-header .container::before {
+  top: auto;
+  bottom: -28px;
+}
+
+.main-navigation::before {
+  content: ".main-navigation";
+}
+
+.user-block::before {
+  content: ".user-block";
+}
+
+.index-logo::before {
+  content: ".index-logo";
+}
+
+.features::before {
+  content: ".features";
+  top: -28px;
+}
+
+.features-item::before {
+  content: ".features-item";
+}
+
+.index-content::before {
+  content: ".index-content";
+}
+
+.index-content-left::before {
+  content: ".index-content-left";
+  left: auto;
+  right: 0;
+}
+
+.index-content-right::before {
+  content: ".index-content-right";
+  left: auto;
+  right: 0;
+}
+
+.main-footer::before {
+  content: ".main-footer";
+}
+
+.main-footer .container::before {
+  top: -28px;
+}
+
+.footer-contacts::before {
+  content: ".footer-contacts";
+}
+
+.footer-social::before {
+  content: ".footer-social";
+}
+
+.footer-copyright::before {
+  content: ".footer-copyright";
+}
+.barbershop-logo::before {
+  content: ".barbershop-logo";
+}
+.promo-item::before {
+	content: ".promo-item";
+}
+*/
