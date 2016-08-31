@@ -513,6 +513,23 @@ body {
   float:left;
 }
 
+.slider-arrow {
+  position: absolute;
+  z-index:2;
+  transition: 0.3s ease;
+}
+
+.slider-arrow-left {
+  top:116px;
+  left: 24px;
+}
+
+.slider-arrow-right {
+  top:116px;
+  right: 20px;
+}
+
+
 .box-slides {
   width:300%;
   -webkit-transition: -webkit-transform .5s ease;
@@ -560,9 +577,14 @@ body {
 }
 
 #btn-2:checked ~ .box-inner .box-slides { 
-  -webkit-transform:translate(-500px); 
-          transform:translate(-500px);
+  -webkit-transform:translate(-620px); 
+          transform:translate(-620px);
 }
+
+
+
+
+
 
 
 /*ПОПУЛЯРНЫЕ ТОВАРЫ*/
@@ -613,15 +635,11 @@ body {
 
 /*состояния популярных товаров*/
 
-.popular-all:hover,
-.open-modal-window:hover,
-.more-about-company:hover {
+.red-btn:hover {
   background-color: #ca2c37;
 }
 
-.popular-all:active,
-.open-modal-window:active,
-.more-about-company:active {
+.red-btn:active {
   background-color: #ba2732;
 }
 
@@ -729,6 +747,14 @@ body {
   border-left-color: #EE3643;
 }
 
+
+.open-catalog {
+  position: absolute;
+  width: 195px;
+  top:210px;
+  left: 23px;
+  z-index: 1;
+}
 
 .buy,
 .to-bookmark {
@@ -919,6 +945,7 @@ body {
     width: 940px;
     padding-top: 70px;
     margin: 0 auto;
+    margin-bottom: 78px;
 }
 
 .services-slider-controls {
@@ -932,9 +959,9 @@ body {
     content: '';
   position: absolute;
   right: 0;
-    top: -30px;
-    width: 10px;
-    height: 222px;
+    top: -45px;
+    width: 8px;
+    height: 241px;
     background: url("../img/shadow.png");
 }
 
@@ -947,22 +974,27 @@ body {
   width: 205px;
   padding: 17px;
     padding-left: 20px;
-    background: #32425C;
+    background-color: #32425C;
     border-bottom: 0.1px solid black;
     display: block;
   text-decoration: none;
 }
 
-.current {
+/*.current {
     color: #32425C;
     background-color: #ffffff;
 
-}
+}*/
 .slider-control:hover {
   color:#ffffff;
     background-color: #293449;
-  
 }
+
+.slider-control:active {
+    color:#000000;
+    background-color: #ffffff;
+}
+
 .services-slider-wrapper {
     float: right;
     width: 620px;
@@ -970,7 +1002,7 @@ body {
 
 .services-slide {
     display: none;
-    padding: 0 300px 100px 0;
+    /*padding: 0 300px 100px 0;*/
 }
 /*.services-slide:first-child {
   display: block;
@@ -1037,6 +1069,13 @@ body {
     top: -15px;
     left: 180px;
     z-index: 1;
+}
+
+.send-request {
+  margin-top: 30px;
+}
+.credit-slide {
+  border-top: 1px solid #405069;
 }
 
 .open-slide {
@@ -1112,42 +1151,17 @@ body {
 }
 
 .more-about-company {
-  display: inline-block;
-  vertical-align: top;
-  background-color: #ee3643;
-  width:253px;
-  text-align: center;
-  color:#ffffff;
-  font-weight: 400px;
-  text-transform: uppercase;
-  font-size:14px;
-  text-decoration: none;
-  padding-top: 13px;
   padding-bottom: 10px;
-  border-radius: 1px;
   margin-top: 15px;
   width:218px;
   border-radius: 3px;
 }
 
 .open-modal-window {
-  display: inline-block;
-  vertical-align: top;
-  background-color: #ee3643;
   width:300px;
-  text-align: center;
-  color:#ffffff;
-  font-weight: 400px;
-  text-transform: uppercase;
-  font-size:14px;
-  text-decoration: none;
-  padding-top: 13px;
-  padding-bottom: 10px;
-  border-radius: 1px;
   margin-top: 55px;
   border-radius: 3px;
 }
-
 
 
 /*ПОДВАЛ*/
