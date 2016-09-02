@@ -51,7 +51,7 @@ var openMap = document.querySelector(".open-map");
 var popupMap = document.querySelector(".modal-map");
 var closeMap = popupMap.querySelector(".close");
 
-openMap.addEventListener("mouseover", function(event) {
+openMap.addEventListener("click", function(event) {
 	event.preventDefault();
 	popupMap.classList.add("modal-map-show");
 })
@@ -88,6 +88,7 @@ openGuarantee.addEventListener("click", function(event) {
 	event.preventDefault();
 	showGuarantee.classList.add("open-slide");
 	showDelivery.classList.remove("open-slide");
+	showDelivery.classList.add("closed-slide");
 	showCredit.classList.remove("open-slide");
 });
 
